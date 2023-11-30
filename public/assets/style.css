@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    text-transform: uppercase;
+}
+
+section {
+    padding: 50px;
+}
+
+#about {
+    display: flex;
+    border-bottom: 1px solid black;
+    gap: 4rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#about .col1 img {
+    border-radius: 10%;
+}
+
+#about .col2 p {
+    text-align: justify;
+    letter-spacing: 0.2rem;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.img-project {
+    display: flex;
+    margin: auto;
+    gap: 2.4rem;
+    justify-content: space-between;
+}
+
+h2 {
+    color: #333;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+
+/* Tambahkan gaya khusus untuk formulir */
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #333;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 30rem;
+    margin-bottom: 10rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: start;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+footer .col1 {
+    width: 40%;
+    padding-left: 3rem;
+}
+
+footer .col2 {
+    width: 60%;
+}

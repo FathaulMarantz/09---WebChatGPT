@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,200;1,500;1,700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: "Poppins";
+    font-weight: 200;
 }
 
 body {
@@ -15,11 +18,48 @@ header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
-header h1 {
-    text-transform: uppercase;
+header .nav-logo h1 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+header .nav-mid {
+    display: flex;
+    gap: 2rem;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+header .nav-mid a {
+    text-decoration: none;
+}
+
+header .nav-mid a h3 {
+    color: white;
+}
+
+header .nav-extra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 1rem;
+}
+
+header .nav-extra a {
+    text-decoration: none;
+    color: white;
 }
 
 section {
@@ -32,6 +72,7 @@ section {
     gap: 4rem;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 4rem;
 }
 
 #about .col1 img {
@@ -111,4 +152,8 @@ footer .col1 {
 
 footer .col2 {
     width: 60%;
+}
+
+button {
+    margin: 0;
 }

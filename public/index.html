@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="main-navbar">
         <div class="nav-logo">
             <h1>AUL</h1>
         </div>
@@ -25,28 +25,34 @@
             <a href="#contact">
                 <h3>Contact</h3>
             </a>
-        </div>
-        <div class="nav-extra">
-            <a href=""><i data-feather="search"></i></a>
-            <a href=""><i data-feather="align-justify"></i></a>
+            <a href="" id="hamburger-menu"><i data-feather="align-justify"></i></a>
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" style="position: relative; z-index: 2;">
         <div class="col1">
-            <img src="./img/profile.jpg" alt="profile-picture">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FF0066" d="M44.8,-57.3C59.1,-51.2,72.7,-39.6,75.1,-25.9C77.6,-12.2,68.8,3.7,61,17.3C53.1,30.9,46,42.3,36,46.6C26,51,13,48.4,-1.6,50.6C-16.2,52.9,-32.4,59.9,-48.1,57.3C-63.8,54.8,-79,42.7,-82.2,27.9C-85.3,13.1,-76.4,-4.4,-70.5,-22.9C-64.5,-41.4,-61.5,-60.9,-50.2,-68.1C-39,-75.2,-19.5,-69.9,-2.1,-67C15.2,-64,30.4,-63.4,44.8,-57.3Z" transform="translate(100 100)" />
+                </svg>
+            <img src="./img/profile.png" alt="profile-picture">
         </div>
         <div class="col2">
             <h2>About Me</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum repellat praesentium omnis quis assumenda eveniet quod unde facilis atque, sed temporibus commodi maxime totam officiis? Fugiat repellendus deserunt deleniti nobis. Provident
-                enetur aliquam quos perferendis laboriosam atque omnis pariatur voluptatum placeat tempore. Debitis, quidem voluptatibus! Quidem sapiente accusantium nostrum vel ab velit, a odio iure cum reiciendis, error, possimus voluptates illo maxime
-                amet corporis ut voluptatum doloremque ratione iste? Suscipit qui quae exercitationem repellendus est.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora pariatur adipisci reiciendis fugit veritatis eveniet tempore qui saepe alias non, cumque repudiandae accusantium quia possimus eum modi. Iste, nemo accusamus? Mollitia eaque
+                voluptatem iste veritatis itaque explicabo, rerum, odit molestiae placeat beatae voluptas quas laborum assumenda sapiente illum excepturi ipsam dicta modi dolor perspiciatis quibusdam. Omnis deserunt ipsam cum ex. Lorem ipsum dolor, sit
+                amet consectetur adipisicing elit. Voluptatum repellat praesentium omnis quis assumenda eveniet quod unde facilis atque, sed temporibus commodi maxime totam officiis? Fugiat repellendus deserunt deleniti nobis. Provident enetur aliquam
+                quos perferendis laboriosam atque omnis pariatur voluptatum placeat tempore. Debitis, quidem voluptatibus! Quidem sapiente accusantium nostrum vel ab velit, a odio iure cum reiciendis, error, possimus voluptates illo maxime amet corporis
+                ut voluptatum doloremque ratione iste? Suscipit qui quae exercitationem repellendus est.</p>
+            <div class="tambahan">
+                <a href="#"><i data-feather="mail"></i><span> example@gmail.com</span></a>
+                <a href="#"><i data-feather="map-pin"></i><span> Jawa Barat, Indonesia</span></a>
+            </div>
         </div>
     </section>
 
     <section id="project">
         <h2>Projects</h2>
-        <div class="img-project">
+        <div class="img-project" style="display: flex; flex-wrap: wrap;">
             <div class="project">
                 <img src="./img/img-particles.png" alt="Project 1">
                 <h3>Project 1</h3>
@@ -63,7 +69,6 @@
                 <p>Deskripsi singkat tentang project 3.</p>
             </div>
         </div>
-        <!-- Tambahkan project lainnya -->
     </section>
     <section id="contact">
         <h2>Contact</h2>

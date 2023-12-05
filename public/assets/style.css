@@ -6,6 +6,7 @@
     border: 0;
     font-family: "Poppins";
     font-weight: 200;
+    font-size: 1rem;
 }
 
 body {
@@ -14,9 +15,13 @@ body {
     padding: 0;
 }
 
+
+/* Navbar */
+
 header {
     background-color: #333;
     color: white;
+    border-bottom: 2px solid rgb(226, 5, 5);
     text-align: center;
     padding: 0.6rem;
     display: flex;
@@ -24,6 +29,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 9999999;
 }
 
 header .nav-logo h1 {
@@ -39,50 +45,92 @@ header .nav-mid {
     text-decoration: none;
     justify-content: center;
     align-items: center;
+    margin-right: 1rem;
 }
 
 header .nav-mid a {
     text-decoration: none;
+    color: white;
 }
 
 header .nav-mid a h3 {
     color: white;
 }
 
-header .nav-extra {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin-right: 1rem;
-}
-
-header .nav-extra a {
-    text-decoration: none;
-    color: white;
+#hamburger-menu {
+    display: none;
 }
 
 section {
     padding: 50px;
 }
 
+
+/* About */
+
 #about {
     display: flex;
     border-bottom: 1px solid black;
-    gap: 4rem;
     justify-content: center;
     align-items: flex-start;
     margin-top: 4rem;
+    width: 100%;
+}
+
+#about .col1 {
+    width: 40%;
+    position: relative;
 }
 
 #about .col1 img {
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10%;
 }
 
+#about .col2 {
+    width: 60%;
+    padding-top: 2.4rem;
+}
+
+#about .col2 h2 {
+    font-size: 2rem;
+    display: inline-block;
+}
+
+#about .col2 h2::after {
+    content: " ";
+    border-bottom: 1px solid #FF0066;
+    display: block;
+    padding-bottom: -1rem;
+}
+
 #about .col2 p {
+    margin-top: 2rem;
     text-align: justify;
     letter-spacing: 0.2rem;
 }
+
+#about .col2 .tambahan {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3rem;
+}
+
+#about .col2 .tambahan a {
+    text-decoration: none;
+    color: #FF0066;
+}
+
+#about .col2 .tambahan a span {
+    color: #2f363d;
+}
+
+
+/* Project */
 
 #projects h2 {
     text-align: center;
@@ -139,7 +187,6 @@ footer {
     color: white;
     text-align: start;
     padding: 10px;
-    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -156,4 +203,53 @@ footer .col2 {
 
 button {
     margin: 0;
+}
+
+
+/* Laptop */
+
+
+/* @media only screen and (min-width: 993px) {} */
+
+
+/* Tablet */
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    /* Tambahkan gaya CSS yang sesuai untuk layar sedang */
+    html {
+        font-size: 75%;
+    }
+    header .nav-mid a h3 {
+        display: none;
+    }
+    #hamburger-menu {
+        display: block;
+    }
+    img {
+        width: 86%;
+    }
+}
+
+
+/* Handphone */
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 56%;
+    }
+    section {
+        padding: 1.8rem;
+    }
+    #about {
+        margin-top: 6rem;
+    }
+    header .nav-mid a h3 {
+        display: none;
+    }
+    #hamburger-menu {
+        display: block;
+    }
+    img {
+        width: 75%;
+    }
 }

@@ -15,7 +15,7 @@
         <div class="nav-logo">
             <h1>AUL</h1>
         </div>
-        <div class="nav-mid">
+        <div class="nav-mid" id="nav-mid">
             <a href="#about">
                 <h3>About Me</h3>
             </a>
@@ -25,7 +25,7 @@
             <a href="#contact">
                 <h3>Contact</h3>
             </a>
-            <a href="" id="hamburger-menu"><i data-feather="align-justify"></i></a>
+            <a id="hamburger-menu"><i data-feather="align-justify"></i></a>
         </div>
     </header>
 
@@ -55,21 +55,21 @@
         <h2>Projects</h2>
         <div class="img-project">
             <div class="project">
-                <img src="./img/img-particles.png" alt="Project 1">
+                <img src="./img/img-particles.png" alt="Project 1" class="image-project">
                 <div class="project-content">
                     <h3>Project 1</h3>
                     <p>Deskripsi singkat tentang project 1.</p>
                 </div>
             </div>
             <div class="project">
-                <img src="./img/img-JSO.png" alt="Project 2">
+                <img src="./img/img-JSO.png" alt="Project 2" class="image-project">
                 <div class="project-content">
                     <h3>Project 2</h3>
                     <p>Deskripsi singkat tentang project 2.</p>
                 </div>
             </div>
             <div class="project">
-                <img src="./img/img-blog.png" alt="Project 3">
+                <img src="./img/img-blog.png" alt="Project 3" class="image-project">
                 <div class="project-content">
                     <h3>Project 3</h3>
                     <p>Deskripsi singkat tentang project 3.</p>
@@ -86,33 +86,52 @@
     </section>
     <section id="contact">
         <h2>Contact</h2>
-        <form id="contact-form" action="./assets/submit_form.html" method="post" target="_blank">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="row">
+            <div class="left-coloum">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.8551457745316!2d108.41342807534836!3d-6.6648666651565085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6edf8c624e0eeb%3A0x750d66e2866d640b!2sInstitut%20Teknologi%20Bandung%20Kampus%20Cirebon!5e0!3m2!1sid!2sid!4v1704289295143!5m2!1sid!2sid"
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="gmaps"></iframe>
+            </div>
+            <div class="right-coloum">
+                <form id="contact-form" action="./assets/submit_form.html" method="post" target="_blank">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button onclick="tampilkanInput()">Tampilkan Input</button>
-            <!-- <button type="submit">Kirim Pesan</button> -->
-        </form>
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button onclick="tampilkanInput()">Tampilkan Input</button>
+                    <!-- <button type="submit">Kirim Pesan</button> -->
+                </form>
+            </div>
+        </div>
 
     </section>
 
 
     <footer>
-        <div class="col1">
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: linkedin.com/in/yourname</p>
+        <div class="social-media">
+            <a href="#" target="_blank"><i data-feather="facebook" width="32" height="32"></i></a>
+            <a href="https://www.instagram.com/tz_ahmad" target="_blank"><i data-feather="instagram" width="32" height="32"></i></a>
+            <a href="#" target="_blank"><i data-feather="linkedin" width="32" height="32"></i></a>
+            <a href="#" target="_blank"><i data-feather="twitter" width="32" height="32"></i></a>
+            <a href="#" target="_blank"><i data-feather="youtube" width="32" height="32"></i></a>
+            <a href="https://github.com/FathaulMarantz" target="_blank"><i data-feather="github" width="32" height="32"></i></a>
         </div>
-        <div class="col2">
-            <p>&copy; 2023 A U L. All rights reserved.</p>
-        </div>
+        <div class="line-bar"></div>
+        <p>&copy; 2023 A U L || All rights reserved.</p>
     </footer>
     <script>
         feather.replace();
+        // Ambil elemen-elemen yang diperlukan
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMid = document.getElementById('nav-mid');
+
+        // Tambahkan event listener untuk mengaktifkan dan menonaktifkan class "active"
+        hamburgerMenu.addEventListener('click', function() {
+            navMid.classList.toggle('active');
+        });
     </script>
     <script src="./assets/script.js"></script>
 </body>

@@ -7,12 +7,15 @@
     font-family: "Poppins";
     font-weight: 200;
     font-size: 1rem;
+    --bgcolor: whitesmoke;
+    --primarycolor: #FF0066;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    /* overflow-x: hidden; */
 }
 
 
@@ -46,7 +49,19 @@ header .nav-mid {
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
+    /* transform: translateX(100%); */
+    transition: transform 0.3s ease-in-out;
 }
+
+
+/* header .nav-mid.active {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100;
+    bottom: 0;
+    background-color: #333;
+} */
 
 header .nav-mid a {
     text-decoration: none;
@@ -103,7 +118,7 @@ section {
 #about .col2 h2::after {
     content: " ";
     display: block;
-    border-bottom: 1px solid #FF0066;
+    border-bottom: 1px solid var(--primarycolor);
     padding-bottom: -1rem;
 }
 
@@ -152,7 +167,7 @@ section {
     justify-content: center;
 }
 
-img {
+.image-project {
     object-fit: cover;
     border-radius: 2%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -160,6 +175,37 @@ img {
 
 
 /* Tambahkan gaya khusus untuk formulir */
+
+#contact {
+    margin: 3rem 0 4rem 0;
+    width: 100%;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+
+#contact .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 3rem;
+}
+
+.row .left-coloum {
+    width: 50%;
+}
+
+.row .right-coloum {
+    width: 50%;
+}
+
+.gmaps {
+    width: 100%;
+    height: 100%;
+}
 
 form {
     display: grid;
@@ -185,30 +231,37 @@ button {
     border: none;
     cursor: pointer;
     width: 30rem;
-    margin-bottom: 10rem;
+    margin: auto;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: start;
+    margin-top: 2rem;
     padding: 10px;
     bottom: 0;
     width: 100%;
+    text-align: start;
+    color: white;
+    background-color: #333;
+    border-top: 3px solid var(--primarycolor);
+}
+
+footer .social-media {
+    margin-top: 1rem;
     display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-footer .col1 {
-    width: 40%;
-    padding-left: 3rem;
+footer .social-media a {
+    color: var(--bgcolor);
 }
 
-footer .col2 {
-    width: 60%;
-}
-
-button {
-    margin: 0;
+footer .line-bar {
+    margin: 1.2rem 0 0.8rem 0;
+    content: "";
+    background-color: var(--bgcolor);
+    width: 100%;
+    height: 2px;
 }
 
 
@@ -263,6 +316,20 @@ button {
     img {
         width: 86%;
     }
+    #contact .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 80%;
+        margin: auto;
+    }
+    #contact .row .left-coloum {
+        width: 100%;
+        flex: 1 1 1 45px;
+    }
+    #contact .row .right-coloum {
+        width: 100%;
+        flex: 1 1 1 45px;
+    }
 }
 
 
@@ -315,5 +382,23 @@ button {
     }
     img {
         width: 75%;
+    }
+    #contact .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 80%;
+        margin: auto;
+    }
+    #contact .row .left-coloum {
+        width: 100%;
+        flex: 1 1 1 45px;
+    }
+    #contact .row .right-coloum {
+        width: 100%;
+        flex: 1 1 1 45px;
+    }
+    footer .social-media a .feather {
+        width: 24px;
+        height: 24px;
     }
 }
